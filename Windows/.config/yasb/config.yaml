@@ -180,7 +180,7 @@ widgets:
       uptime: True
       blur: False
       blur_background: True
-      animation_duration: 250 # Milisecond
+      animation_duration: 250 # Millisecond
       button_row: 5 # Number of buttons in row, min 1 max 5
       buttons:
         signout: ["\udb80\udf43", "Sign out"]

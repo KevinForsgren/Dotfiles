@@ -1,6 +1,6 @@
 # Run this script as Administrator (or enable Developer Mode)
-$DOTFILES = "D:\GitHub\Dotfiles\Windows\.config"
-$PATH = "C:\Users\farha"
+$ScriptDirectory = "$PSScriptRoot\Windows\.config"
+$UserHomeDirectory = "$HOME"
 
 function Create-Link($target, $linkPath) {
     # Check if a file or folder already exists at the destination
@@ -17,14 +17,14 @@ function Create-Link($target, $linkPath) {
 # --- DEFINE YOUR LINKS HERE ---
 
 # FastFetch
-Create-Link "$DOTFILES\fastfetch\config.jsonc" "$PATH\.config\fastfetch\config.jsonc"
+Create-Link "$ScriptDirectory\fastfetch\config.jsonc" "$UserHomeDirectory\.config\fastfetch\config.jsonc"
 
 # WezTerm
-Create-Link "$DOTFILES\wezterm\wezterm.lua" "$PATH\.config\wezterm\wezterm.lua"
+Create-Link "$ScriptDirectory\wezterm\wezterm.lua" "$UserHomeDirectory\.config\wezterm\wezterm.lua"
 
 # YASB (Yet Another Status Bar)
-Create-Link "$DOTFILES\yasb\config.yaml" "$PATH\.config\yasb\config.yaml"
-Create-Link "$DOTFILES\yasb\styles.css" "$PATH\.config\yasb\styles.css"
+Create-Link "$ScriptDirectory\yasb\config.yaml" "$UserHomeDirectory\.config\yasb\config.yaml"
+Create-Link "$ScriptDirectory\yasb\styles.css" "$UserHomeDirectory\.config\yasb\styles.css"
 
 # Neovim / .config style apps
 # $CONFIG_DIR = "$HOME\.config"
@@ -32,8 +32,8 @@ Create-Link "$DOTFILES\yasb\styles.css" "$PATH\.config\yasb\styles.css"
 # Create-Link "$DOTFILES\nvim" "$CONFIG_DIR\nvim"
 
 # Komorebi
-Create-Link "$DOTFILES\Komorebi\whkdrc" "$PATH\.config\whkdrc"
-Create-Link "$DOTFILES\Komorebi\komorebi.json" "$PATH\komorebi.json"
+Create-Link "$ScriptDirectory\Komorebi\whkdrc" "$UserHomeDirectory\.config\whkdrc"
+Create-Link "$ScriptDirectory\Komorebi\komorebi.json" "$UserHomeDirectory\komorebi.json"
 
 
 Write-Host "All links updated!" -ForegroundColor Cyan
