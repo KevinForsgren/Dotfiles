@@ -1,7 +1,7 @@
 # Enable FastFetch
 if [[ -o interactive ]]; then
     # Below command prevent fastfetch from loading in zed, nvim and vim
-    if [[ "$TERM_PROGRAM" != "zed" && -z "$NVIM" && -z "$VIMRUNTIME" ]]; then
+    if [[ "$TERM_PROGRAM" != "zed" && -z "$NVIM" && -z "$VIMRUNTIME" && -z "code" ]]; then
         fastfetch
     fi
 fi
